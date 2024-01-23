@@ -17,7 +17,7 @@ def notify_payments(body):
 
     url_base = os.environ['URL_BASE']
     port = os.environ['PORT']
-    endpoint = os.environ['ENDPOINT'].replace('id_pedidos', order_id)
+    endpoint = os.environ['ENDPOINT'].replace('order_id', order_id)
 
     url = url_base + ':' + port +  '/' + endpoint
     print('REQUEST URL: ', url)
