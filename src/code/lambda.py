@@ -24,12 +24,12 @@ def notify_payments(body):
 
     try:
         #response = requests.get(url, data=json.dumps(body), headers={'Content-Type': 'application/json'})
-        response = requests.get(url)
+        response = requests.get(url, headers={'Content-Type': 'application/json'})
         print('Response: ', response.json())
 
-        if response.status_code == 200:
+        if response.status_code > 199 and response.status_code < 300:
             return {
-                'statusCode': 200,
+                'statusCode': response.status_code,
                 'body': json.dumps('Pedido {order_id} Message processed successfully!')
             }
         else:
