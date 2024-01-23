@@ -1,4 +1,4 @@
-name: Deploy Lambda Pedidos
+name: Deploy Lambda Producao
 
 on:
   workflow_dispatch:

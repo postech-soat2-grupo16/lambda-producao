@@ -1,4 +1,4 @@
-name: Destroy Lambda Pedidos
+name: Destroy Lambda Producao
 
 on:
   workflow_dispatch:
