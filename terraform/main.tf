@@ -66,7 +66,7 @@ resource "aws_lambda_function" "lambda_producao" {
   environment {
     variables = {
       "URL_BASE" = var.url_base
-      "ENDPOINT" = "orders/order_id"
+      "ENDPOINT" = "pedidos/order_id"
       "PORT"     = "8000"
     }
   }
