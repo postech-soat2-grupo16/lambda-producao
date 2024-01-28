@@ -6,14 +6,14 @@ def main(event, context):
     for record in event['Records']:
         message_body = json.loads(record['body'])
         process_sqs_message(message_body)
-        return notify_payments(message_body)
+        return notify_production(message_body)
 
 def process_sqs_message(message_body):
     print("Processing SQS message:")
     print("Body:", message_body)
 
-def notify_payments(body):
-    order_id = body['order_id']
+def notify_production(body):
+    order_id = body['PedidoID']
 
     url_base = os.environ['URL_BASE']
     port = os.environ['PORT']
