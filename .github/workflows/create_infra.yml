@@ -49,5 +49,5 @@ jobs:
           TF_VAR_subnet_a: ${{ vars.SUBNET_A }}
           TF_VAR_subnet_b: ${{ vars.SUBNET_B }}
           TF_VAR_url_base: ${{ secrets.URL_BASE_ALB }}
-          TF_VAR_sqs_arn: ${{ secrets.SQS_ARN }}
+          TF_VAR_sqs_arn: ${{ secrets.SQS_PRODUCAO_ARN }}
           TF_VAR_security_group_alb: ${{ vars.SG_LOAD_BALANCER }}
